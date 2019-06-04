@@ -159,7 +159,7 @@ docker run --rm -v {path to config file}:/config.yaml xelalex/dregsy
 This will still use the local *Docker* daemon as the relay:
 
 ```bash
-docker run --privileged --rm -v {path to config file}:/config.yaml -v /var/run/docker.sock:/var/run/docker.sock xelalex/dregsy
+docker run --privileged --rm --env AWS_ACCESS_KEY_ID=XXXX --env AWS_SECRET_ACCESS_KEY=XXXX --env AWS_DEFAULT_REGION=XXXX -v {path to config file}:/config.yaml -v /var/run/docker.sock:/var/run/docker.sock xelalex/dregsy
 ```
 
 ### Running On *Kubernetes*
